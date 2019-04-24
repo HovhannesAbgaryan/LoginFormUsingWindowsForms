@@ -35,8 +35,8 @@ namespace LoginFormUsingWindowsForms
                         command.Parameters.AddWithValue("@Password", password);
                         connection.Open();
 
-                        int count = (int)command.ExecuteScalar();
-                        if(count == 1)
+                        int result = (int)command.ExecuteScalar();
+                        if (result == 1)
                         {
                             this.Hide();
                             WelcomeForm welcomeForm = new WelcomeForm();
